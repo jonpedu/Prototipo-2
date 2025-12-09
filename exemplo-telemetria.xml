@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="1.0" generator="IVP-SAT" date="2025-10-17T12:00:00.000Z">
+  <metadata>
+    <title>Exemplo - Telemetria Básica</title>
+    <description>Projeto de exemplo que lê sensores e grava no SD</description>
+    <hardware>ESP32 - PION CanSat</hardware>
+  </metadata>
+  <nodes>
+    <node id="node_0" type="start">
+      <position>
+        <x>400</x>
+        <y>100</y>
+      </position>
+      <data></data>
+    </node>
+    <node id="node_1" type="read_temperature">
+      <position>
+        <x>400</x>
+        <y>200</y>
+      </position>
+      <data>
+        <property name="variable" value="temperatura"/>
+      </data>
+    </node>
+    <node id="node_2" type="read_humidity">
+      <position>
+        <x>400</x>
+        <y>300</y>
+      </position>
+      <data>
+        <property name="variable" value="umidade"/>
+      </data>
+    </node>
+    <node id="node_3" type="read_pressure">
+      <position>
+        <x>400</x>
+        <y>400</y>
+      </position>
+      <data>
+        <property name="variable" value="pressao"/>
+      </data>
+    </node>
+    <node id="node_4" type="read_battery">
+      <position>
+        <x>400</x>
+        <y>500</y>
+      </position>
+      <data>
+        <property name="variable" value="bateria"/>
+      </data>
+    </node>
+    <node id="node_5" type="save_sd">
+      <position>
+        <x>400</x>
+        <y>600</y>
+      </position>
+      <data>
+        <property name="variable" value="temperatura"/>
+      </data>
+    </node>
+    <node id="node_6" type="led_white">
+      <position>
+        <x>400</x>
+        <y>700</y>
+      </position>
+      <data>
+        <property name="state" value="on"/>
+      </data>
+    </node>
+    <node id="node_7" type="wait">
+      <position>
+        <x>400</x>
+        <y>800</y>
+      </position>
+      <data>
+        <property name="time" value="1"/>
+      </data>
+    </node>
+    <node id="node_8" type="led_white">
+      <position>
+        <x>400</x>
+        <y>900</y>
+      </position>
+      <data>
+        <property name="state" value="off"/>
+      </data>
+    </node>
+  </nodes>
+  <edges>
+    <edge id="edge_0" source="node_0" target="node_1" sourceHandle="" targetHandle=""/>
+    <edge id="edge_1" source="node_1" target="node_2" sourceHandle="" targetHandle=""/>
+    <edge id="edge_2" source="node_2" target="node_3" sourceHandle="" targetHandle=""/>
+    <edge id="edge_3" source="node_3" target="node_4" sourceHandle="" targetHandle=""/>
+    <edge id="edge_4" source="node_4" target="node_5" sourceHandle="" targetHandle=""/>
+    <edge id="edge_5" source="node_5" target="node_6" sourceHandle="" targetHandle=""/>
+    <edge id="edge_6" source="node_6" target="node_7" sourceHandle="" targetHandle=""/>
+    <edge id="edge_7" source="node_7" target="node_8" sourceHandle="" targetHandle=""/>
+  </edges>
+</project>
